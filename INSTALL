@@ -1,0 +1,2 @@
+REAL_BUILD=y make
+REAL_BUILD=y make install

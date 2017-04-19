@@ -7,7 +7,7 @@ SRC := $(shell pwd)
 # set these only if not set with ?=
 VERSION ?= $(shell $(SRC)/get-versions.sh VERSION)
 REVISION ?= $(shell $(SRC)/get-versions.sh REVISION)
-BUILD_PRODUCT_TGZ=$(SRC)/calamari-clients-build-output.tar.gz
+BUILD_PRODUCT_TGZ=$(SRC)/romana_1.2.2.tar.gz
 
 RPM_REVISION ?= $(shell $(SRC)/get-versions.sh -r REVISION)
 RPMBUILD=$(SRC)/../rpmbuild
@@ -29,7 +29,7 @@ TARNAME = ../$(DISTNAMEVER).tar.gz
 INSTALL=/usr/bin/install
 
 UI_BASEDIR = $(DESTDIR)/opt/calamari/webapp/content
-UI_SUBDIRS = manage admin login dashboard
+UI_SUBDIRS = manage admin dashboard login
 CONFIG_JSON = dashboard/dist/scripts/config.json
 
 FINDCMD =find . \
